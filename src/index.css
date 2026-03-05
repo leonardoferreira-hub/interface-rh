@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Tipografia moderna */
+    --font-display: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+
+    --background: 220 20% 97%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Rosa/Magenta (RH) */
+    --primary: 330 65% 28%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 330 65% 28%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 330 65% 28%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode com base navy profundo */
+    --background: 222 30% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 330 32% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 330 32% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 330 65% 48%;
+    --primary-foreground: 330 35% 6%;
+
+    --secondary: 330 22% 14%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 330 22% 14%;
+    --muted-foreground: 330 10% 72%;
+
+    --accent: 330 22% 14%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 330 20% 16%;
+    --input: 330 20% 16%;
+    --ring: 330 65% 48%;
+
+    --sidebar-background: 330 35% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 330 65% 48%;
+    --sidebar-primary-foreground: 330 35% 6%;
+    --sidebar-accent: 330 22% 14%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 330 20% 16%;
+    --sidebar-ring: 330 65% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
